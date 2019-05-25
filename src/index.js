@@ -1,16 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "redux";
-
-import "./styles.css";
-import ViewScreen from "./screens/ViewScreen";
-// import ProductList from "./components/ProductList";
+import { Provider } from "react-redux";
+import { store } from "./redux";
+import RootView from "./RootView";
 
 function App() {
   return (
-    <React.Fragment>
-      <ViewScreen />
-    </React.Fragment>
+    <Provider store={store}>
+      <RootView />
+    </Provider>
   );
 }
 
