@@ -12,7 +12,7 @@ class ViewScreen extends Component {
         <SearchBar /> <br />
         <Button text="Add new user" isPressed={this.addButtonPressed} />
         <div style={{ paddingTop: 20 }}>
-          <ListViewer />
+          <ListViewer users={this.props.users} />
         </div>
       </React.Fragment>
     );
@@ -23,7 +23,9 @@ class ViewScreen extends Component {
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    users: state.users.users
+  };
 };
 
 const mapDispatchToProps = dispatch => {

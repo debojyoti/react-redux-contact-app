@@ -3,12 +3,13 @@ import React, { Component } from "react";
 class ListViewer extends Component {
   render() {
     if (this.props.users && this.props.users.length) {
+      console.log(this.props.users);
       return (
         <React.Fragment>
           <ol>
-            <li>Logitech G106 keyboard</li>
-            <li>AOC 15' monitor</li>
-            <li>HDMI adaptor</li>
+            {this.props.users.map((user, index) => (
+              <li key={index}> {user.name} </li>
+            ))}
           </ol>
         </React.Fragment>
       );

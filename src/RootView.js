@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { changeCurrentView } from "./redux";
 import ViewScreen from "./screens/ViewScreen";
 import AddUserScreen from "./screens/AddUserScreen";
 import RemoveUserScreen from "./screens/RemoveUserScreen";
